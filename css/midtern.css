@@ -1,0 +1,229 @@
+@charset "utf-8";
+@import url("menu.css");
+/* CSS Document */
+
+
+/*body*/
+html,body{/*一開始歸零*/
+	padding:0;
+	margin:0;
+}
+
+body{
+	font-family: 'Kalam', cursive;
+}
+
+/*header*/
+header{
+	position:fixed;
+	width:100%;
+	top:0;/*置頂*/
+	box-sizing:border-box;
+	background:rgba(255,255,255,0.8);
+	z-index:100000;
+}
+
+/*nav bar*/
+nav{
+	width:97%;
+	margin:auto;
+	text-align:center;
+}
+
+/* banner */
+.banner{
+	display:block;/*可不加(確保是一區塊)*/
+	position:relative;
+	overflow:hidden;
+	width:100%;
+	height:100%;
+	min-width:980px;
+	background:url(../images/nature/IMG_8726.jpg) no-repeat;
+	background-size:100%;
+}
+
+.anitext1, .anitext2{
+	display:inline-block;
+	position:absolute;
+	padding:10px;
+	width:100%;
+	
+	
+}
+
+.anitext1{
+	left:10%;
+	z-index:20;
+	text-shadow: 0.05em 0.05em 5em #666;
+	
+	opacity:0;/*一開始看不到*/
+	
+	animation-name:ant1;/*動畫名稱*/
+	animation-duration:2s;/*動畫時間*/
+	animation-iteration-count:1;/*播放次數*/
+	animation-timing-function:ease;/*動態方式漸慢開始與結束*/
+	animation-delay:0.5s;/*幾秒後播放*/
+	animation-direction:normal;/*動畫播放順序為順左到右向(反向是reverse)*/
+	animation-fill-mode:forwards;/*動畫結束後停格於最後一格，需搭配direction*/
+	
+	-webkit-animation-name:ant1;
+	-webkit-animation-duration:2s;
+	-webkit-animation-iteration-count:1;
+	-webkit-animation-timing-function:ease;
+	-webkit-animation-delay:0.5s;
+	-webkit-animation-direction:normal;
+	-webkit-animation-fill-mode:forwards;
+}
+
+.anitext2{
+	text-shadow: 0.05em 0.05em 5em #666;
+	opacity:0;/*一開始看不到*/
+	
+	animation-name:ant2;/*動畫名稱*/
+	animation-duration:2s;/*動畫時間*/
+	animation-iteration-count:1;/*播放次數*/
+	animation-timing-function:ease;/*動態方式漸慢開始與結束*/
+	animation-delay:1.5s;/*幾秒後播放*/
+	animation-direction:normal;/*動畫播放順序為順左到右向(反向是reverse)*/
+	animation-fill-mode:forwards;/*動畫結束後停格於最後一格，需搭配direction*/
+	
+	-webkit-animation-name:ant2;
+	-webkit-animation-duration:2s;
+	-webkit-animation-iteration-count:1;
+	-webkit-animation-timing-function:ease;
+	-webkit-animation-delay:1.5s;
+	-webkit-animation-direction:normal;
+	-webkit-animation-fill-mode:forwards;
+}
+
+@keyframes ant1{
+	from{
+		top:20%;
+		opacity:0;	
+		color:#666;	
+		font-size:60px;
+	}
+	/*要有空格*/
+	to{
+		top:30%;
+		opacity:1;
+		color:#fff;	
+		font-size:90px;	
+	}
+}
+
+@keyframes ant2{
+	from{
+		top:80%;
+		left:70%;
+		opacity:0;	
+		color:#666;
+		font-size:30px;	
+	}
+	/*要有空格*/
+	to{
+		top:70%;
+		left:60%;
+		opacity:1;
+		color:#fff;		
+		font-size:30px;
+	}
+}
+
+
+
+
+/*section*/
+section{
+	width:80%;
+	padding:0;
+	margin:auto;
+	margin-top:20px;
+}
+
+section h1{
+	text-align:center;
+	font-size:40px;
+	color:#666;
+	padding:20px 0px;
+}
+
+.picbox{
+	position:relative;
+	float:left;
+	box-sizing:border-box;
+	width:33.33%;/*每區塊佔1/3*/
+	min-width:300px;
+	padding:5px 5px;
+}
+
+.picbox img{
+	width:100%;
+}
+
+.fadebox{
+	
+	opacity:0;/*透明度0*/
+}
+
+.fadebox p{
+	/*讓物件水平置中*/
+	position:absolute;
+	top:30%;
+	left:50%;
+	transform:translate(-50%,-50%);/*平移至中間*/
+	-ms-transform:translate(-50%,-50%);/*IE9*/
+	-webkit-transform:translate(-50%,-50%);/*Safari*/
+	
+	display:block;	
+	text-align:center;
+	font-size:40px;
+	color:#FFF;
+}
+
+.fadebox a{
+	/*讓物件水平置中*/
+	position:absolute;
+	top:55%;
+	left:50%;
+	transform:translate(-50%,-50%);/*平移至中間*/
+	-ms-transform:translate(-50%,-50%);/*IE9*/
+	-webkit-transform:translate(-50%,-50%);/*Safari*/
+	
+	display:block;
+	padding:16px 32px;
+	color:#FFF;
+	text-decoration:none;
+	background:rgba(145,181,221,1);/*淺藍*/
+}
+
+.picbox:hover img{	
+	filter:brightness(30%);/*變淡30% 使background黑色顯現出來一點*/
+	-webkit-filter:brightness(30%);/*Safari*/
+}
+
+.picbox:hover .fadebox{
+	opacity:1;
+}
+
+.fadebox a:hover{
+	cursor:pointer;
+}
+
+/*footer*/
+footer{
+	position:relative;
+	clear:both;
+	padding:100px 0px 8px;
+}
+footer p{		
+	text-align:center;
+	font-size:13px;
+	color:#666;
+}
+
+footer .icon{		
+	display:block;
+	margin:auto;/*置中*/
+	text-align:center;
+}

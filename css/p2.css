@@ -1,0 +1,141 @@
+@charset "utf-8";
+@import url("menu.css");
+/* CSS Document */
+
+/*body*/
+html,body{/*一開始歸零*/
+	padding:0;
+	margin:0;
+}
+
+body{
+	font-family: 'Kalam', cursive;
+}
+
+/*header*/
+
+header{
+	position:fixed;
+	width:100%;
+	top:0;/*置頂*/
+	box-sizing:border-box;
+	background:rgba(255,255,255,0.8);
+	z-index:100000;
+}
+
+/*nav bar*/
+nav{
+	width:97%;
+	margin:auto;
+	text-align:center;
+}
+
+/*title*/
+.title{
+	position:relative;
+	padding:50px 5px 10px 5px;
+	display:block;
+	text-align:center;
+	font-size:30px;
+	color:#666;
+}
+
+/*section*/
+section{
+	position:relative;
+	width:80%;
+	margin:auto;
+	
+}
+
+.box{
+	display:inline-block;
+	box-sizing:border-box;
+	width:100%;
+	background:#fff;	
+	overflow:hidden;
+	z-index:20;
+	padding:10px 0px;
+	
+	-webkit-column-count:3;/*Chrome,Safari,Opera*/
+	-moz-column-count:3;/*Firefox*/
+	column-count:3;
+	-webkit-column-gap:20px;
+	-moz-column-gap:20px;/*欄間距離*/
+	column-gap:20px;
+	
+}
+
+.imgbox{
+	box-sizing:border-box;
+	width:100%;
+	overflow:hidden;
+	margin:0px 0px 12px;/*距離下面12 左上右0*/
+	box-shadow:2px 2px 8px #999;
+	cursor:pointer;
+}
+
+.box img{
+	width:100%;
+	overflow:hidden;
+}
+
+.box .imgbox img{
+	-ms-transform:scale(1,1);/*IE 9*/
+	-webkit-transform:scale(1,1);/*Safari*/
+	transform:scale(1,1);/*Standard syntax*/
+	
+	transition:transform 1s;
+	-webkit-transform:transform 1s;
+	
+	transition-timing-function:ease-in-out;
+	-webkit-transition-timing-function:ease-in-out;/*Safari*/
+}
+
+.imgbox:hover img{
+	-ms-transform:scale(1.2,1.2);/*IE 9*/
+	-webkit-transform:scale(1.2,1.2);/*Safari*/
+	transform:scale(1.2,1.2);/*Standard syntax*/
+}
+
+
+
+/*aside*/
+aside{
+	position:fixed;
+	right:10px;
+	bottom:10px;
+	z-index:100000;
+}
+
+.totop{
+	width:44px;
+	height:44px;
+	background:#91b5dd url(../images/top2x.png) no-repeat;/*圖含有2個箭頭 這樣只要load一張圖*/
+	background-size:200%;/*放大 讓只有一個箭頭顯示*/
+	background-position:0px 0px;
+}
+
+.totop:hover{
+	background:#666 url(../images/top2x.png) no-repeat;
+	background-size:200%;
+	background-position:-44px 0px;
+}
+
+/*footer*/
+footer{
+	position:relative;
+	clear:both;
+	padding:100px 0px 8px;
+}
+footer p{		
+	text-align:center;
+	font-size:13px;
+	color:#666;
+}
+
+footer .icon{		
+	display:block;
+	margin:auto;/*置中*/
+	text-align:center;
+}
